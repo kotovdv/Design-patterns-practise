@@ -13,16 +13,16 @@ import static java.time.LocalDate.now;
 public class App {
 
     public static void main(String[] args) {
-        randomIntegerShowcase(10, 100);
+        randomIntegerShowcase();
         randomLocalDateShowcase(LocalDate.of(1970, 1, 1), now());
     }
 
-    private static void randomIntegerShowcase(int from, int to) {
+    private static void randomIntegerShowcase() {
         IntegerRandomValueFactory integerFactory = new IntegerRandomValueFactory();
-        RandomValueGenerator<Integer> randomValueGenerator = new RandomValueGenerator<>(integerFactory);
-        Integer randomValue = randomValueGenerator.pickRandomValue(from, to);
+        RandomValueGenerator<Integer> integerGenerator = new RandomValueGenerator<>(integerFactory);
+        Integer randomInteger = integerGenerator.pickRandomValue(10, 100);
 
-        System.out.println(randomValue);
+        System.out.println(randomInteger);
     }
 
     private static void randomLocalDateShowcase(LocalDate from, LocalDate to) {

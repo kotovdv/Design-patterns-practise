@@ -1,6 +1,6 @@
 package com.kotovdv.abstractfactory;
 
-import com.kotovdv.abstractfactory.selector.RandomValueSelector;
+import com.kotovdv.abstractfactory.selector.Selector;
 import com.kotovdv.abstractfactory.factory.RandomValueFactory;
 import com.kotovdv.abstractfactory.range.Range;
 
@@ -17,8 +17,8 @@ public class RandomValueGenerator<T> {
 
     public T pickRandomValue(T from, T to) {
         Range<T> range = randomValueFactory.createRange(from, to);
-        RandomValueSelector<T> selector = randomValueFactory.createSelector();
+        Selector<T> selector = randomValueFactory.createSelector();
 
-        return selector.selectRandomValue(range);
+        return selector.select(range);
     }
 }

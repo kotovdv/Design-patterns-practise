@@ -1,6 +1,6 @@
 package com.kotovdv.abstractfactory.factory;
 
-import com.kotovdv.abstractfactory.selector.RandomValueSelector;
+import com.kotovdv.abstractfactory.selector.Selector;
 import com.kotovdv.abstractfactory.range.Range;
 import com.kotovdv.abstractfactory.selector.RandomIntegerSelector;
 
@@ -17,7 +17,7 @@ public class IntegerRandomValueFactory implements RandomValueFactory<Integer> {
     }
 
     @Override
-    public RandomValueSelector<Integer> createSelector() {
+    public Selector<Integer> createSelector() {
         return new RandomIntegerSelector();
     }
 }

@@ -9,10 +9,10 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * @author Dmitriy Kotov
  */
-public class RandomLocalDateSelector implements RandomValueSelector<LocalDate> {
+public class RandomLocalDateSelector implements Selector<LocalDate> {
 
     @Override
-    public LocalDate selectRandomValue(Range<LocalDate> range) {
+    public LocalDate select(Range<LocalDate> range) {
         LocalDate from = range.from();
         LocalDate to = range.to();
         long daysBetween = getDaysBetween(from, to);

@@ -2,7 +2,7 @@ package com.kotovdv.abstractfactory.factory;
 
 import com.kotovdv.abstractfactory.range.Range;
 import com.kotovdv.abstractfactory.selector.RandomLocalDateSelector;
-import com.kotovdv.abstractfactory.selector.RandomValueSelector;
+import com.kotovdv.abstractfactory.selector.Selector;
 
 import java.time.LocalDate;
 
@@ -19,7 +19,7 @@ public class LocalDateRandomValueFactory implements RandomValueFactory<LocalDate
     }
 
     @Override
-    public RandomValueSelector<LocalDate> createSelector() {
+    public Selector<LocalDate> createSelector() {
         return new RandomLocalDateSelector();
     }
 }
