@@ -4,8 +4,9 @@ import com.kotovdv.abstractfactory.range.Range;
 import com.kotovdv.abstractfactory.selector.Selector;
 
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 import java.util.concurrent.ThreadLocalRandom;
+
+import static java.time.temporal.ChronoUnit.DAYS;
 
 /**
  * @author Dmitriy Kotov
@@ -22,6 +23,6 @@ public class RandomLocalDateSelector implements Selector<LocalDate> {
     }
 
     private long getDaysBetween(LocalDate from, LocalDate to) {
-        return ChronoUnit.DAYS.between(from, to);
+        return DAYS.between(from, to);
     }
 }
