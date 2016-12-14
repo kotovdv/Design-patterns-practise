@@ -6,7 +6,7 @@ import com.kotovdv.abstractfactory.selector.Selector;
 /**
  * @author Dmitriy Kotov
  */
-public interface RandomValueFactory<T> {
+public interface RangeBasedValueSelectorFactory<T> {
 
     /**
      * @param from leftBorder

@@ -9,7 +9,7 @@ import static com.kotovdv.abstractfactory.range.IntegerRange.between;
 /**
  * @author Dmitriy Kotov
  */
-public class IntegerRandomValueFactory implements RandomValueFactory<Integer> {
+public class RandomIntegerSelectorFactory implements RangeBasedValueSelectorFactory<Integer> {
 
     @Override
     public Range<Integer> createRange(Integer from, Integer to) {

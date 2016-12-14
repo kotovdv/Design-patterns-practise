@@ -11,7 +11,7 @@ import static com.kotovdv.abstractfactory.range.LocalDateRange.between;
 /**
  * @author Dmitriy Kotov
  */
-public class LocalDateRandomValueFactory implements RandomValueFactory<LocalDate> {
+public class RandomLocalDateSelectorFactory implements RangeBasedValueSelectorFactory<LocalDate> {
 
     @Override
     public Range<LocalDate> createRange(LocalDate from, LocalDate to) {
