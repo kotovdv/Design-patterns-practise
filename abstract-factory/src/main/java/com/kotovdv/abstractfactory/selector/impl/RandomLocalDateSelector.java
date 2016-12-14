@@ -1,6 +1,7 @@
-package com.kotovdv.abstractfactory.selector;
+package com.kotovdv.abstractfactory.selector.impl;
 
 import com.kotovdv.abstractfactory.range.Range;
+import com.kotovdv.abstractfactory.selector.Selector;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;

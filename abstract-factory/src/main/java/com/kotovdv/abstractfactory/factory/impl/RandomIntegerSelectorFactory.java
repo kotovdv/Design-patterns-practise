@@ -1,10 +1,11 @@
-package com.kotovdv.abstractfactory.factory;
+package com.kotovdv.abstractfactory.factory.impl;
 
-import com.kotovdv.abstractfactory.selector.Selector;
+import com.kotovdv.abstractfactory.factory.RangeBasedValueSelectorFactory;
 import com.kotovdv.abstractfactory.range.Range;
-import com.kotovdv.abstractfactory.selector.RandomIntegerSelector;
+import com.kotovdv.abstractfactory.selector.Selector;
+import com.kotovdv.abstractfactory.selector.impl.RandomIntegerSelector;
 
-import static com.kotovdv.abstractfactory.range.IntegerRange.between;
+import static com.kotovdv.abstractfactory.range.impl.IntegerRange.between;
 
 /**
  * @author Dmitriy Kotov

@@ -1,12 +1,13 @@
-package com.kotovdv.abstractfactory.factory;
+package com.kotovdv.abstractfactory.factory.impl;
 
+import com.kotovdv.abstractfactory.factory.RangeBasedValueSelectorFactory;
 import com.kotovdv.abstractfactory.range.Range;
-import com.kotovdv.abstractfactory.selector.RandomLocalDateSelector;
 import com.kotovdv.abstractfactory.selector.Selector;
+import com.kotovdv.abstractfactory.selector.impl.RandomLocalDateSelector;
 
 import java.time.LocalDate;
 
-import static com.kotovdv.abstractfactory.range.LocalDateRange.between;
+import static com.kotovdv.abstractfactory.range.impl.LocalDateRange.between;
 
 /**
  * @author Dmitriy Kotov

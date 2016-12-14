@@ -1,6 +1,7 @@
 package com.kotovdv.abstractfactory.factory;
 
 import com.kotovdv.abstractfactory.RangeBasedValueSelectorClient;
+import com.kotovdv.abstractfactory.factory.impl.RandomIntegerSelectorFactory;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

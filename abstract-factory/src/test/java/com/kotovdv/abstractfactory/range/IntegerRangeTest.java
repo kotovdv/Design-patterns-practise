@@ -1,6 +1,7 @@
 package com.kotovdv.abstractfactory.range;
 
 import com.kotovdv.abstractfactory.exception.LeftBorderIsGreaterThanRightBorderException;
+import com.kotovdv.abstractfactory.range.impl.IntegerRange;
 import org.junit.Test;
 
 /**
