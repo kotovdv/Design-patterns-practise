@@ -14,11 +14,11 @@ public class RandomIntegerSelectorFactoryTest {
     @Test
     public void testGeneration() {
         RandomIntegerSelectorFactory factory = new RandomIntegerSelectorFactory();
-        RangeBasedValueSelectorClient<Integer> selector = new RangeBasedValueSelectorClient<>(factory);
+        RangeBasedValueSelectorClient<Integer> client = new RangeBasedValueSelectorClient<>(factory);
 
         int from = 10;
         int to = 100;
-        Integer pickedValue = selector.pickValue(from, to);
+        Integer pickedValue = client.pickValue(from, to);
 
         assertThat(pickedValue).isBetween(from, to);
     }
