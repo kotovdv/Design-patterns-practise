@@ -22,7 +22,7 @@ public abstract class Serializer {
 
         Document document = prepareData(values);
 
-        writeData(path, document);
+        save(path, document);
     }
 
     /**
@@ -38,7 +38,7 @@ public abstract class Serializer {
         }
     }
 
-    private void writeData(Path path, Document document) {
+    private void save(Path path, Document document) {
         try {
             Files.write(path, document.getContent().getBytes(), APPEND);
         } catch (IOException e) {

@@ -13,15 +13,21 @@ import java.util.Map;
 public class App {
 
     public static void main(String[] args) {
+        Map<String, String> data = createData();
+
+        serializeData(new YamlSerializer(), "person.data.yaml", data);
+        serializeData(new JsonSerializer(), "person.data.json", data);
+    }
+
+    private static Map<String, String> createData() {
         Map<String, String> data = new HashMap<>();
         data.put("First Name", "John");
         data.put("Last Name", "Doe");
 
-        storeData(new YamlSerializer(), "person.data.yaml", data);
-        storeData(new JsonSerializer(), "person.data.json", data);
+        return data;
     }
 
-    private static void storeData(Serializer serializer, String path, Map<String, String> data) {
+    private static void serializeData(Serializer serializer, String path, Map<String, String> data) {
         serializer.serializeData(path, data);
     }
 
