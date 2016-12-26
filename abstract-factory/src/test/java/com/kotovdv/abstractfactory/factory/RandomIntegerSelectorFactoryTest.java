@@ -1,6 +1,6 @@
 package com.kotovdv.abstractfactory.factory;
 
-import com.kotovdv.abstractfactory.RangeBasedValueSelectorClient;
+import com.kotovdv.abstractfactory.Client;
 import com.kotovdv.abstractfactory.factory.impl.RandomIntegerSelectorFactory;
 import org.junit.Test;
 
@@ -14,7 +14,7 @@ public class RandomIntegerSelectorFactoryTest {
     @Test
     public void testGeneration() {
         RandomIntegerSelectorFactory factory = new RandomIntegerSelectorFactory();
-        RangeBasedValueSelectorClient<Integer> client = new RangeBasedValueSelectorClient<>(factory);
+        Client<Integer> client = new Client<>(factory);
 
         int from = 10;
         int to = 100;

@@ -1,6 +1,6 @@
 package com.kotovdv.abstractfactory.factory;
 
-import com.kotovdv.abstractfactory.RangeBasedValueSelectorClient;
+import com.kotovdv.abstractfactory.Client;
 import com.kotovdv.abstractfactory.factory.impl.RandomLocalDateSelectorFactory;
 import org.junit.Test;
 
@@ -16,7 +16,7 @@ public class RandomLocalDateSelectorFactoryTest {
     @Test
     public void testGeneration() throws Exception {
         RandomLocalDateSelectorFactory factory = new RandomLocalDateSelectorFactory();
-        RangeBasedValueSelectorClient<LocalDate> client = new RangeBasedValueSelectorClient<>(factory);
+        Client<LocalDate> client = new Client<>(factory);
 
         LocalDate to = LocalDate.now();
         LocalDate from = to.minusDays(10);

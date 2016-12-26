@@ -1,17 +1,17 @@
 package com.kotovdv.abstractfactory;
 
-import com.kotovdv.abstractfactory.selector.Selector;
 import com.kotovdv.abstractfactory.factory.RangeBasedValueSelectorFactory;
 import com.kotovdv.abstractfactory.range.Range;
+import com.kotovdv.abstractfactory.selector.Selector;
 
 /**
  * @author Dmitriy Kotov
  */
-public class RangeBasedValueSelectorClient<T> {
+public class Client<T> {
 
     private final RangeBasedValueSelectorFactory<T> rangeBasedValueSelectorFactory;
 
-    public RangeBasedValueSelectorClient(RangeBasedValueSelectorFactory<T> rangeBasedValueSelectorFactory) {
+    public Client(RangeBasedValueSelectorFactory<T> rangeBasedValueSelectorFactory) {
         this.rangeBasedValueSelectorFactory = rangeBasedValueSelectorFactory;
     }
 
