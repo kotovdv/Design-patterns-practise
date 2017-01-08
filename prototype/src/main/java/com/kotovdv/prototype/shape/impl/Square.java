@@ -1,6 +1,6 @@
 package com.kotovdv.prototype.shape.impl;
 
-import com.kotovdv.prototype.exception.CloneFailedException;
+import com.kotovdv.prototype.exception.CopyFailedException;
 import com.kotovdv.prototype.shape.Shape;
 import com.kotovdv.prototype.shape.color.ShapeColor;
 
@@ -46,7 +46,7 @@ public class Square implements Shape<Square>, Cloneable {
         try {
             return (Square) super.clone();
         } catch (CloneNotSupportedException e) {
-            throw new CloneFailedException(e);
+            throw new CopyFailedException(e);
         }
     }
 }
