@@ -3,6 +3,7 @@ package com.kotovdv.proxy.logic;
 import com.kotovdv.proxy.exception.AccidentInfoNotFoundException;
 import com.kotovdv.proxy.exception.FailedToLoadAccidentDataException;
 import com.kotovdv.proxy.model.accident.Accident;
+import com.kotovdv.proxy.model.accident.AccidentData;
 import com.kotovdv.proxy.model.accident.LazyAccidentData;
 
 import java.io.IOException;
@@ -12,6 +13,7 @@ import java.util.Properties;
 import static java.lang.ClassLoader.getSystemResourceAsStream;
 import static java.time.LocalDate.parse;
 import static java.time.format.DateTimeFormatter.ISO_LOCAL_DATE;
+import static java.util.Collections.emptyList;
 
 /**
  * @author Dmitriy Kotov
@@ -43,9 +45,14 @@ public class AccidentFactory {
     }
 
     private LazyAccidentData buildProxy(String accidentName, Properties commonInfo) {
-        return new LazyAccidentData(
+        AccidentData basicAccidentData = new AccidentData(
                 commonInfo.getProperty("summary"),
                 parse(commonInfo.getProperty("accident_date"), ISO_LOCAL_DATE),
+                emptyList(),
+                emptyList());
+
+        return new LazyAccidentData(
+                basicAccidentData,
                 accidentName
         );
     }

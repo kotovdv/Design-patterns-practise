@@ -16,6 +16,7 @@ import java.util.function.Consumer;
 
 import static com.kotovdv.proxy.model.accident.Outcome.DIED;
 import static com.kotovdv.proxy.model.accident.Outcome.SURVIVED;
+import static java.lang.ClassLoader.getSystemResourceAsStream;
 import static org.apache.commons.csv.CSVFormat.DEFAULT;
 
 /**
@@ -24,7 +25,7 @@ import static org.apache.commons.csv.CSVFormat.DEFAULT;
 public class CasualtiesParser {
 
     public static Multimap<Outcome, Person> parseCasualties(String accidentName) {
-        try (InputStream stream = ClassLoader.getSystemResourceAsStream(accidentName + ".csv");
+        try (InputStream stream = getSystemResourceAsStream(accidentName + ".csv");
              InputStreamReader reader = new InputStreamReader(stream)) {
             CSVParser csvRecords = new CSVParser(reader, DEFAULT.withFirstRecordAsHeader());
 

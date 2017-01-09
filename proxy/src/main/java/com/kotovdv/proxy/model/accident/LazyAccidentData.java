@@ -14,25 +14,23 @@ import static com.kotovdv.proxy.model.accident.Outcome.SURVIVED;
  */
 public class LazyAccidentData implements Accident {
 
-    private final String summary;
-    private final LocalDate accidentDate;
     private final String accidentName;
     private AccidentData originalData;
+    private boolean isInitialized;
 
-    public LazyAccidentData(String summary, LocalDate accidentDate, String accidentName) {
-        this.summary = summary;
-        this.accidentDate = accidentDate;
+    public LazyAccidentData(AccidentData basicAccidentData, String accidentName) {
+        this.originalData = basicAccidentData;
         this.accidentName = accidentName;
     }
 
     @Override
     public String getSummary() {
-        return summary;
+        return originalData.getSummary();
     }
 
     @Override
     public LocalDate getAccidentDate() {
-        return accidentDate;
+        return originalData.getAccidentDate();
     }
 
     @Override
@@ -52,19 +50,20 @@ public class LazyAccidentData implements Accident {
     private void checkLazyLoading() {
         if (isNotInitialized()) {
             this.originalData = initialize(accidentName);
+            this.isInitialized = true;
         }
     }
 
     private boolean isNotInitialized() {
-        return originalData == null;
+        return !isInitialized;
     }
 
     private AccidentData initialize(String accidentName) {
         Multimap<Outcome, Person> casualties = parseCasualties(accidentName);
 
         return new AccidentData(
-                summary,
-                accidentDate,
+                originalData.getSummary(),
+                originalData.getAccidentDate(),
                 casualties.get(DIED),
                 casualties.get(SURVIVED));
     }
