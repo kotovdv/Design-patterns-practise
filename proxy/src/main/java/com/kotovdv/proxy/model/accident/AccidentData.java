@@ -12,14 +12,14 @@ import static java.util.Collections.unmodifiableList;
 /**
  * @author Dmitriy Kotov
  */
-public class TransportAccidentData implements TransportAccident {
+public class AccidentData implements Accident {
 
     private final String summary;
     private final LocalDate accidentDate;
     private final List<Person> victims = new ArrayList<>();
     private final List<Person> survivors = new ArrayList<>();
 
-    public TransportAccidentData(String summary, LocalDate accidentDate, Collection<Person> victims, Collection<Person> survivors) {
+    public AccidentData(String summary, LocalDate accidentDate, Collection<Person> victims, Collection<Person> survivors) {
         this.summary = summary;
         this.accidentDate = accidentDate;
         this.victims.addAll(victims);

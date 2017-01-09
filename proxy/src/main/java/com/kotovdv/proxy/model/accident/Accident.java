@@ -7,7 +7,7 @@ import java.time.LocalDate;
 /**
  * @author Dmitriy Kotov
  */
-public interface TransportAccident {
+public interface Accident {
 
     /**
      * @return summary info about an accident

@@ -1,7 +1,7 @@
 package com.kotovdv.proxy;
 
-import com.kotovdv.proxy.logic.TransportAccidentFactory;
-import com.kotovdv.proxy.model.accident.TransportAccident;
+import com.kotovdv.proxy.logic.AccidentFactory;
+import com.kotovdv.proxy.model.accident.Accident;
 
 /**
  * @author Dmitriy Kotov
@@ -9,8 +9,8 @@ import com.kotovdv.proxy.model.accident.TransportAccident;
 public class App {
 
     public static void main(String[] args) {
-        TransportAccidentFactory accidentFactory = new TransportAccidentFactory();
-        TransportAccident titanicCrash = accidentFactory.buildAccident("titanic_crash");
+        AccidentFactory accidentFactory = new AccidentFactory();
+        Accident titanicCrash = accidentFactory.buildAccident("titanic_crash");
 
         System.out.println("Summary: " + titanicCrash.getSummary()); //Reading preloaded summary
         System.out.println("Accident date: " + titanicCrash.getAccidentDate()); //Reading preloaded accident date

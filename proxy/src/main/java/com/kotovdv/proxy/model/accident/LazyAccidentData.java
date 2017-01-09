@@ -6,20 +6,20 @@ import com.kotovdv.proxy.model.person.Person;
 import java.time.LocalDate;
 
 import static com.kotovdv.proxy.logic.CasualtiesParser.parseCasualties;
-import static com.kotovdv.proxy.model.accident.AccidentOutcome.DIED;
-import static com.kotovdv.proxy.model.accident.AccidentOutcome.SURVIVED;
+import static com.kotovdv.proxy.model.accident.Outcome.DIED;
+import static com.kotovdv.proxy.model.accident.Outcome.SURVIVED;
 
 /**
  * @author Dmitriy Kotov
  */
-public class LazyTransportAccidentData implements TransportAccident {
+public class LazyAccidentData implements Accident {
 
     private final String summary;
     private final LocalDate accidentDate;
     private final String accidentName;
-    private TransportAccidentData originalData;
+    private AccidentData originalData;
 
-    public LazyTransportAccidentData(String summary, LocalDate accidentDate, String accidentName) {
+    public LazyAccidentData(String summary, LocalDate accidentDate, String accidentName) {
         this.summary = summary;
         this.accidentDate = accidentDate;
         this.accidentName = accidentName;
@@ -59,10 +59,10 @@ public class LazyTransportAccidentData implements TransportAccident {
         return originalData == null;
     }
 
-    private TransportAccidentData initialize(String accidentName) {
-        Multimap<AccidentOutcome, Person> casualties = parseCasualties(accidentName);
+    private AccidentData initialize(String accidentName) {
+        Multimap<Outcome, Person> casualties = parseCasualties(accidentName);
 
-        return new TransportAccidentData(
+        return new AccidentData(
                 summary,
                 accidentDate,
                 casualties.get(DIED),

@@ -1,9 +1,9 @@
 package com.kotovdv.proxy.logic;
 
-import com.kotovdv.proxy.exception.FailedToLoadCommonDataException;
-import com.kotovdv.proxy.exception.TransportAccidentInfoNotFoundException;
-import com.kotovdv.proxy.model.accident.LazyTransportAccidentData;
-import com.kotovdv.proxy.model.accident.TransportAccident;
+import com.kotovdv.proxy.exception.AccidentInfoNotFoundException;
+import com.kotovdv.proxy.exception.FailedToLoadAccidentDataException;
+import com.kotovdv.proxy.model.accident.Accident;
+import com.kotovdv.proxy.model.accident.LazyAccidentData;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,21 +16,21 @@ import static java.time.format.DateTimeFormatter.ISO_LOCAL_DATE;
 /**
  * @author Dmitriy Kotov
  */
-public class TransportAccidentFactory {
+public class AccidentFactory {
 
-    public TransportAccident buildAccident(String accidentName) {
+    public Accident buildAccident(String accidentName) {
         String commonInfoFileName = accidentName + ".properties";
 
         try (InputStream commonInfoStream = getSystemResourceAsStream(commonInfoFileName)) {
             if (commonInfoStream == null) {
-                throw new TransportAccidentInfoNotFoundException(commonInfoFileName);
+                throw new AccidentInfoNotFoundException(commonInfoFileName);
             }
 
             Properties commonInfo = readCommonInfoProperties(commonInfoStream);
 
             return buildProxy(accidentName, commonInfo);
         } catch (IOException e) {
-            throw new FailedToLoadCommonDataException(e);
+            throw new FailedToLoadAccidentDataException(e);
         }
 
     }
@@ -42,8 +42,8 @@ public class TransportAccidentFactory {
         return commonInfo;
     }
 
-    private LazyTransportAccidentData buildProxy(String accidentName, Properties commonInfo) {
-        return new LazyTransportAccidentData(
+    private LazyAccidentData buildProxy(String accidentName, Properties commonInfo) {
+        return new LazyAccidentData(
                 commonInfo.getProperty("summary"),
                 parse(commonInfo.getProperty("accident_date"), ISO_LOCAL_DATE),
                 accidentName
