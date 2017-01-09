@@ -13,6 +13,7 @@
         <module>abstract-factory</module>
         <module>factory-method</module>
         <module>prototype</module>
+        <module>proxy</module>
     </modules>
 
     <build>
@@ -50,6 +51,16 @@
                 <groupId>org.yaml</groupId>
                 <artifactId>snakeyaml</artifactId>
                 <version>1.17</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-csv</artifactId>
+                <version>1.4</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>20.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
