@@ -18,7 +18,7 @@ public interface Serializer {
     Data read(Path path);
 
     /**
-     * Stores data from given object with given resourceName
+     * Stores data from given object
      *
      * @param data data, that will be stored
      * @return path to a file with serialized data
