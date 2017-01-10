@@ -1,7 +1,7 @@
 package com.kotovdv.adapter;
 
 import com.kotovdv.adapter.serializer.Serializer;
-import com.kotovdv.adapter.serializer.gson.GsonSerializer;
+import com.kotovdv.adapter.serializer.gson.JsonSerializer;
 
 import java.nio.file.Path;
 
@@ -18,7 +18,7 @@ public class App {
                 singletonMap("defaultKey", "defaultValue"));
 
 
-        Serializer serializer = new GsonSerializer();
+        Serializer serializer = new JsonSerializer();
         Path pathToFile = serializer.write(initialData);
 
         SerializerClient serializerClient = new SerializerClient(serializer);

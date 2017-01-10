@@ -23,7 +23,7 @@ import static java.util.stream.Collectors.joining;
  *
  * @author Dmitriy Kotov
  */
-public class GsonSerializer implements Serializer {
+public class JsonSerializer implements Serializer {
 
     private final Gson gson = new Gson();
 
@@ -42,7 +42,7 @@ public class GsonSerializer implements Serializer {
     public Path write(Data data) {
         String rawData = gson.toJson(data);
 
-        return persist(rawData, get(data.getDataName() + ".gson"));
+        return persist(rawData, get(data.getDataName() + ".json"));
     }
 
     private String getRawData(Path path) throws IOException {
