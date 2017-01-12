@@ -15,6 +15,7 @@
         <module>prototype</module>
         <module>proxy</module>
         <module>adapter</module>
+        <module>decorator</module>
     </modules>
 
     <build>
@@ -65,5 +66,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
 </project>
