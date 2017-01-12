@@ -13,3 +13,5 @@
 [Proxy](https://github.com/kotovdv/Design-patterns-practise/wiki/Proxy)
 
 [Adapter](https://github.com/kotovdv/Design-patterns-practise/wiki/Adapter)
+
+[Decorator](https://github.com/kotovdv/Design-patterns-practise/wiki/Decorator)
