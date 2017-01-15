@@ -4,16 +4,33 @@
 
 [Abstract factory](https://github.com/kotovdv/Design-patterns-practise/wiki/Abstract-factory)
 
+[Builder]
+
 [Factory method](https://github.com/kotovdv/Design-patterns-practise/wiki/Factory-method)
 
 [Prototype](https://github.com/kotovdv/Design-patterns-practise/wiki/Prototype)
 
-<b>Structural patterns:</b>
+[Singleton]
 
-[Proxy](https://github.com/kotovdv/Design-patterns-practise/wiki/Proxy)
+
+<b>Structural patterns:</b>
 
 [Adapter](https://github.com/kotovdv/Design-patterns-practise/wiki/Adapter)
 
+[Bridge](https://github.com/kotovdv/Design-patterns-practise/wiki/Bridge)
+
+[Composite]
+
 [Decorator](https://github.com/kotovdv/Design-patterns-practise/wiki/Decorator)
 
-[Bridge](https://github.com/kotovdv/Design-patterns-practise/wiki/Bridge)
+[Facade]
+
+[Flyweight]
+
+[Proxy](https://github.com/kotovdv/Design-patterns-practise/wiki/Proxy)
+
+
+
+
+
+
