@@ -15,3 +15,5 @@
 [Adapter](https://github.com/kotovdv/Design-patterns-practise/wiki/Adapter)
 
 [Decorator](https://github.com/kotovdv/Design-patterns-practise/wiki/Decorator)
+
+[Bridge](https://github.com/kotovdv/Design-patterns-practise/wiki/Bridge)
