@@ -25,10 +25,10 @@ public class IlluminationPlate implements LightSource {
     }
 
     @Override
-    public void setColour(RgbColor newColor) {
+    public void setColor(RgbColor newColor) {
         System.out.printf("Changing illumination plate [%s] color%n", id);
 
-        this.lightSources.forEach(lightSource -> lightSource.setColour(newColor));
+        this.lightSources.forEach(lightSource -> lightSource.setColor(newColor));
     }
 
     public IlluminationPlate addLightSource(LightSource lightSource) {

@@ -34,7 +34,7 @@ public class Bulb implements LightSource {
     }
 
     @Override
-    public void setColour(RgbColor newColor) {
+    public void setColor(RgbColor newColor) {
         if (newColor == null) {
             throw new InvalidColorException(String.format("Cant use [%s] as a  color", "null"));
         }

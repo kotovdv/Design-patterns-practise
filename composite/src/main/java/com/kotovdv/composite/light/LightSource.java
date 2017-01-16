@@ -18,5 +18,5 @@ public interface LightSource {
      *
      * @param color new color for the light source
      */
-    void setColour(RgbColor color);
+    void setColor(RgbColor color);
 }
