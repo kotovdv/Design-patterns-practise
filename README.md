@@ -19,7 +19,7 @@
 
 [Bridge](https://github.com/kotovdv/Design-patterns-practise/wiki/Bridge)
 
-[Composite]
+[Composite](https://github.com/kotovdv/Design-patterns-practise/wiki/Composite)
 
 [Decorator](https://github.com/kotovdv/Design-patterns-practise/wiki/Decorator)
 
