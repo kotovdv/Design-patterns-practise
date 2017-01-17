@@ -29,8 +29,27 @@
 
 [Proxy](https://github.com/kotovdv/Design-patterns-practise/wiki/Proxy)
 
+<b>Behavioral pattern:</b>
 
+[Chain of responsibility]
 
+[Command]
 
+[Interpreter]
 
+[Iterator]
+
+[Mediator]
+
+[Memento]
+
+[Observer]
+
+[State]
+
+[Strategy]
+
+[Template method]
+
+[Visitor]
 
