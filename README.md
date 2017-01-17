@@ -45,7 +45,7 @@
 
 [Observer]
 
-[State]
+[State](https://github.com/kotovdv/Design-patterns-practise/wiki/State)
 
 [Strategy]
 
