@@ -2,7 +2,12 @@ package com.kotovdv.template.method.text.analysis;
 
 import com.kotovdv.template.method.text.Report;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+
+import static java.util.Collections.addAll;
 
 /**
  * @author Dmitriy Kotov
@@ -19,12 +24,8 @@ public abstract class TextAnalyzer {
     protected abstract Map<String, Long> countWordsFrequency(Collection<String> words);
 
     private Collection<String> collectWords(String text) {
-        StringTokenizer tokenizer = new StringTokenizer(text);
-
         List<String> words = new ArrayList<>();
-        while (tokenizer.hasMoreTokens()) {
-            words.add(tokenizer.nextToken());
-        }
+        addAll(words, text.split("\\s"));
 
         return words;
     }
