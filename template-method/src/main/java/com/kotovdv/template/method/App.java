@@ -1,9 +1,9 @@
 package com.kotovdv.template.method;
 
-import com.kotovdv.template.method.word.Report;
-import com.kotovdv.template.method.word.analysis.NaiveTextAnalyzer;
-import com.kotovdv.template.method.word.analysis.SmartTextAnalyzer;
-import com.kotovdv.template.method.word.analysis.TextAnalyzer;
+import com.kotovdv.template.method.text.Report;
+import com.kotovdv.template.method.text.analysis.NaiveTextAnalyzer;
+import com.kotovdv.template.method.text.analysis.SmartTextAnalyzer;
+import com.kotovdv.template.method.text.analysis.TextAnalyzer;
 
 public class App {
 

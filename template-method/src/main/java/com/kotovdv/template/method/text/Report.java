@@ -1,4 +1,4 @@
-package com.kotovdv.template.method.word;
+package com.kotovdv.template.method.text;
 
 import java.util.Map;
 

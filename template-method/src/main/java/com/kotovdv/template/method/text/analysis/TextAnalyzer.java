@@ -1,6 +1,6 @@
-package com.kotovdv.template.method.word.analysis;
+package com.kotovdv.template.method.text.analysis;
 
-import com.kotovdv.template.method.word.Report;
+import com.kotovdv.template.method.text.Report;
 
 import java.util.*;
 

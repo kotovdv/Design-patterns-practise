@@ -1,4 +1,4 @@
-package com.kotovdv.template.method.word.analysis;
+package com.kotovdv.template.method.text.analysis;
 
 import java.util.Collection;
 import java.util.Map;
