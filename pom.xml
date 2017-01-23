@@ -19,6 +19,7 @@
         <module>bridge</module>
         <module>composite</module>
         <module>state</module>
+        <module>template-method</module>
     </modules>
 
     <build>
