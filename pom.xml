@@ -20,6 +20,7 @@
         <module>composite</module>
         <module>state</module>
         <module>template-method</module>
+        <module>strategy</module>
     </modules>
 
     <build>

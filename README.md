@@ -47,9 +47,9 @@
 
 [State](https://github.com/kotovdv/Design-patterns-practise/wiki/State)
 
-[Strategy]
+[Strategy] (https://github.com/kotovdv/Design-patterns-practise/wiki/Strategy)
 
-[Template method]
+[Template method] (https://github.com/kotovdv/Design-patterns-practise/wiki/Template-method)
 
 [Visitor]
 
