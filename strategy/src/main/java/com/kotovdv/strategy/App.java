@@ -1,8 +1,8 @@
 package com.kotovdv.strategy;
 
 import com.kotovdv.strategy.text.WordCounter;
-import com.kotovdv.strategy.text.read.FileTokenizer;
-import com.kotovdv.strategy.text.read.StreamTokenizer;
+import com.kotovdv.strategy.text.token.FileTokenizer;
+import com.kotovdv.strategy.text.token.StreamTokenizer;
 
 import java.net.URISyntaxException;
 import java.nio.file.Path;

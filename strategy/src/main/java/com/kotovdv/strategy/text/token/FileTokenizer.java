@@ -1,4 +1,4 @@
-package com.kotovdv.strategy.text.read;
+package com.kotovdv.strategy.text.token;
 
 import com.kotovdv.strategy.exception.FailedToReadDataException;
 

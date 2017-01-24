@@ -1,6 +1,6 @@
 package com.kotovdv.strategy.text;
 
-import com.kotovdv.strategy.text.read.Tokenizer;
+import com.kotovdv.strategy.text.token.Tokenizer;
 
 import java.nio.file.Path;
 import java.util.List;

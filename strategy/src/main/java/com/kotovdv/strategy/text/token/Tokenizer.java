@@ -1,4 +1,4 @@
-package com.kotovdv.strategy.text.read;
+package com.kotovdv.strategy.text.token;
 
 import java.nio.file.Path;
 import java.util.List;
