@@ -16,13 +16,15 @@ public class AlphabeticalTextAnalyzer extends TextAnalyzer {
     @Override
     protected Collection<String> filterWords(Collection<String> words) {
         return words.stream()
-                .map(s -> s.replaceAll(NON_ALPHABETICAL_SYMBOLS, "").toLowerCase())
+                .map(s -> s.replaceAll(NON_ALPHABETICAL_SYMBOLS, ""))
                 .filter(s -> !s.isEmpty())
                 .collect(toList());
     }
 
     @Override
     protected Map<String, Long> countWordsFrequency(Collection<String> words) {
-        return words.stream().collect(groupingBy(identity(), counting()));
+        return words.stream()
+                .map(String::toLowerCase)
+                .collect(groupingBy(identity(), counting()));
     }
 }
