@@ -1,6 +1,6 @@
 package com.kotovdv.strategy.text;
 
-import com.kotovdv.strategy.text.read.WordReader;
+import com.kotovdv.strategy.text.read.Tokenizer;
 
 import java.nio.file.Path;
 import java.util.List;
@@ -15,15 +15,15 @@ import static java.util.stream.Collectors.groupingBy;
  */
 public class WordCounter {
 
-    private final WordReader wordReader;
+    private final Tokenizer tokenizer;
 
-    public WordCounter(WordReader wordReader) {
-        this.wordReader = wordReader;
+    public WordCounter(Tokenizer tokenizer) {
+        this.tokenizer = tokenizer;
     }
 
     public Map<String, Long> countWords(Path path) {
-        List<String> words = wordReader.readWords(path);
+        List<String> tokens = tokenizer.readTokens(path);
 
-        return words.stream().collect(groupingBy(identity(), counting()));
+        return tokens.stream().collect(groupingBy(identity(), counting()));
     }
 }

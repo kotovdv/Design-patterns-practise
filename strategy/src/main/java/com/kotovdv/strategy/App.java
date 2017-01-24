@@ -1,8 +1,8 @@
 package com.kotovdv.strategy;
 
 import com.kotovdv.strategy.text.WordCounter;
-import com.kotovdv.strategy.text.read.StreamingWordReader;
-import com.kotovdv.strategy.text.read.WholeFileWordReader;
+import com.kotovdv.strategy.text.read.FileTokenizer;
+import com.kotovdv.strategy.text.read.StreamTokenizer;
 
 import java.net.URISyntaxException;
 import java.nio.file.Path;
@@ -21,13 +21,13 @@ public class App {
     public static void main(String[] args) throws URISyntaxException {
         Path pathToResource = getPathToResource(fileName);
 
-        WordCounter wholeFileWordCounter = new WordCounter(new WholeFileWordReader());
-        Map<String, Long> wordsCount = wholeFileWordCounter.countWords(pathToResource);
-        System.out.printf("Using WholeFileWordReader : [%s]%n", wordsCount);
+        WordCounter fileWordCounter = new WordCounter(new FileTokenizer());
+        Map<String, Long> wordsCount = fileWordCounter.countWords(pathToResource);
+        System.out.printf("Using FileTokenizer : [%s]%n", wordsCount);
 
-        WordCounter streamingWordCounter = new WordCounter(new StreamingWordReader());
-        wordsCount = streamingWordCounter.countWords(pathToResource);
-        System.out.printf("Using StreamingWordReader : [%s]%n", wordsCount);
+        WordCounter streamWordCounter = new WordCounter(new StreamTokenizer());
+        wordsCount = streamWordCounter.countWords(pathToResource);
+        System.out.printf("Using StreamTokenizer : [%s]%n", wordsCount);
     }
 
     private static Path getPathToResource(String resourceName) throws URISyntaxException {

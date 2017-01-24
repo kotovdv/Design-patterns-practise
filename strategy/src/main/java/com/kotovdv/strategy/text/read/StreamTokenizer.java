@@ -13,12 +13,12 @@ import java.util.Scanner;
 /**
  * @author Dmitriy Kotov
  */
-public class StreamingWordReader implements WordReader {
+public class StreamTokenizer implements Tokenizer {
 
     @Override
-    public List<String> readWords(Path path) {
+    public List<String> readTokens(Path path) {
         try (InputStream inputStream = new FileInputStream(path.toFile());
-             Scanner scanner = new Scanner(inputStream).useDelimiter("\\s")) {
+             Scanner scanner = new Scanner(inputStream).useDelimiter("\\s+")) {
 
             List<String> words = new ArrayList<>();
             while (scanner.hasNext()) {

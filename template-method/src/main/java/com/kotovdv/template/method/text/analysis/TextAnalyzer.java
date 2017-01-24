@@ -22,6 +22,6 @@ public abstract class TextAnalyzer {
     protected abstract Map<String, Long> countWordsFrequency(Collection<String> words);
 
     private Collection<String> collectWords(String text) {
-        return asList(text.split("\\s"));
+        return asList(text.split("\\s+"));
     }
 }

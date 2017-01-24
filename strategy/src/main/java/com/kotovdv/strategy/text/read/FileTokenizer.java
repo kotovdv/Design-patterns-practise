@@ -14,12 +14,12 @@ import static java.util.stream.Collectors.joining;
 /**
  * @author Dmitriy Kotov
  */
-public class WholeFileWordReader implements WordReader {
+public class FileTokenizer implements Tokenizer {
 
     @Override
-    public List<String> readWords(Path path) {
+    public List<String> readTokens(Path path) {
         try {
-            return asList(readWholeFile(path).split("\\s"));
+            return asList(readWholeFile(path).split("\\s+"));
         } catch (IOException e) {
             throw new FailedToReadDataException(e);
         }

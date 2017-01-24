@@ -6,13 +6,13 @@ import java.util.List;
 /**
  * @author Dmitriy Kotov
  */
-public interface WordReader {
+public interface Tokenizer {
 
     /**
-     * Reads words from resource, located at given path
+     * Reads tokens (words)  from resource, located at given path
      *
      * @param path path to a resource
-     * @return words, located at given path
+     * @return tokens, located at given path
      */
-    List<String> readWords(Path path);
+    List<String> readTokens(Path path);
 }
