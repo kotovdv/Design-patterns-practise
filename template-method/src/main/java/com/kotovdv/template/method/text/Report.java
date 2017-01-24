@@ -11,20 +11,20 @@ public class Report {
 
     private final String initialText;
     private final Map<String, Long> wordFrequency;
-    private final long wordCount;
+    private final long wordsAnalyzed;
 
     public Report(String initialText, Map<String, Long> wordFrequency) {
         this.initialText = initialText;
         this.wordFrequency = wordFrequency;
-        this.wordCount = wordFrequency.values().stream().mapToLong(value -> value).sum();
+        this.wordsAnalyzed = wordFrequency.values().stream().mapToLong(value -> value).sum();
     }
 
     public String getInitialText() {
         return initialText;
     }
 
-    public long getWordsCount() {
-        return wordCount;
+    public long getWordsAnalyzed() {
+        return wordsAnalyzed;
     }
 
     public Map<String, Long> getWordFrequency() {
@@ -36,7 +36,7 @@ public class Report {
         return "Report{" +
                 "initialText='" + initialText + '\'' +
                 ", wordFrequency=" + wordFrequency +
-                ", wordCount=" + wordCount +
+                ", wordsAnalyzed=" + wordsAnalyzed +
                 '}';
     }
 }

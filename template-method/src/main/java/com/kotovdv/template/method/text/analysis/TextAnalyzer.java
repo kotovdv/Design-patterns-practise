@@ -14,10 +14,14 @@ public abstract class TextAnalyzer {
 
     public Report analyzeText(String text) {
         Collection<String> words = collectWords(text);
+
+        words = filterWords(words);
         Map<String, Long> wordsFrequency = countWordsFrequency(words);
 
         return new Report(text, wordsFrequency);
     }
+
+    protected abstract Collection<String> filterWords(Collection<String> words);
 
     protected abstract Map<String, Long> countWordsFrequency(Collection<String> words);
 
