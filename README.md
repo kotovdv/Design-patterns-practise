@@ -31,7 +31,7 @@
 
 <b>Behavioral pattern:</b>
 
-[Chain of responsibility]
+[Chain of responsibility] (https://github.com/kotovdv/Design-patterns-practise/wiki/Chain-of-responsibility)
 
 [Command]
 
