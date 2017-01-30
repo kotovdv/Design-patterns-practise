@@ -22,11 +22,11 @@ public class App {
         RequestHandlerPipeline pipeline = createPipeline();
 
         Request modificationRequest = createDataModificationRequest();
-        System.out.println("Handling modification request");
+        System.out.println("**** Handling modification request ****");
         pipeline.handle(modificationRequest);
 
         Request dataReadRequest = createDataReadRequest();
-        System.out.println("Handling read only request");
+        System.out.println("\n**** Handling read only request ****");
         pipeline.handle(dataReadRequest);
     }
 
