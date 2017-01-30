@@ -21,6 +21,7 @@
         <module>state</module>
         <module>template-method</module>
         <module>strategy</module>
+        <module>chain-of-responsibility</module>
     </modules>
 
     <build>
