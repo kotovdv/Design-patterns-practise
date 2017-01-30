@@ -9,7 +9,7 @@ import java.util.LinkedList;
 /**
  * @author Dmitriy Kotov
  */
-public class RequestHandlerPipeline {
+public class RequestHandlerPipeline implements RequestHandler {
 
     private Deque<RequestHandler> handlersPipeline = new LinkedList<>();
 
@@ -21,6 +21,15 @@ public class RequestHandlerPipeline {
         return new Builder();
     }
 
+    @Override
+    public boolean shouldHandle(Request request) {
+        return handlersPipeline
+                .stream()
+                .map(handler -> handler.shouldHandle(request))
+                .anyMatch(Boolean.TRUE::equals);
+    }
+
+    @Override
     public void handle(Request request) {
         for (RequestHandler handler : handlersPipeline) {
             if (handler.shouldHandle(request)) {

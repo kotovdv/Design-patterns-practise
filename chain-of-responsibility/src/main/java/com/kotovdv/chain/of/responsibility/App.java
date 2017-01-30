@@ -1,9 +1,6 @@
 package com.kotovdv.chain.of.responsibility;
 
-import com.kotovdv.chain.of.responsibility.handler.AuthenticationRequestHandler;
-import com.kotovdv.chain.of.responsibility.handler.EncodingRequestHandler;
-import com.kotovdv.chain.of.responsibility.handler.LoggingRequestHandler;
-import com.kotovdv.chain.of.responsibility.handler.RequestHandlerPipeline;
+import com.kotovdv.chain.of.responsibility.handler.*;
 import com.kotovdv.chain.of.responsibility.request.Credentials;
 import com.kotovdv.chain.of.responsibility.request.Request;
 import com.kotovdv.chain.of.responsibility.request.RequestBody;
@@ -19,15 +16,13 @@ import static com.kotovdv.chain.of.responsibility.request.RequestType.DATA_READ;
 public class App {
 
     public static void main(String[] args) {
-        RequestHandlerPipeline pipeline = createPipeline();
+        RequestHandler pipeline = createPipeline();
 
-        Request modificationRequest = createDataModificationRequest();
         System.out.println("**** Handling modification request ****");
-        pipeline.handle(modificationRequest);
+        pipeline.handle(createDataModificationRequest());
 
-        Request dataReadRequest = createDataReadRequest();
         System.out.println("\n**** Handling read only request ****");
-        pipeline.handle(dataReadRequest);
+        pipeline.handle(createDataReadRequest());
     }
 
     private static Request createDataReadRequest() {
