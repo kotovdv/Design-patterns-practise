@@ -33,7 +33,7 @@
 
 [Chain of responsibility] (https://github.com/kotovdv/Design-patterns-practise/wiki/Chain-of-responsibility)
 
-[Command]
+[Command] (https://github.com/kotovdv/Design-patterns-practise/wiki/Command)
 
 [Interpreter]
 
