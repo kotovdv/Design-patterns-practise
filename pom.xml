@@ -22,6 +22,7 @@
         <module>template-method</module>
         <module>strategy</module>
         <module>chain-of-responsibility</module>
+        <module>command</module>
     </modules>
 
     <build>
