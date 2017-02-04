@@ -52,19 +52,10 @@ public class UserInputController {
                 break;
             }
             case RIGHT: {
-                returnRolledBackCommand();
+                executeRolledBackCommand();
                 break;
             }
         }
-    }
-
-    private void returnRolledBackCommand() {
-        if (commandsToExecute.isEmpty()) {
-            return;
-        }
-
-        DrawingCommand drawingCommand = commandsToExecute.pollFirst();
-        execute(drawingCommand);
     }
 
     private void rollBackLastCommand() {
@@ -74,6 +65,15 @@ public class UserInputController {
 
         DrawingCommand command = executedCommands.pollFirst();
         rollback(command);
+    }
+
+    private void executeRolledBackCommand() {
+        if (commandsToExecute.isEmpty()) {
+            return;
+        }
+
+        DrawingCommand drawingCommand = commandsToExecute.pollFirst();
+        execute(drawingCommand);
     }
 
     private void drawRectangle(MouseEvent event) {
