@@ -23,6 +23,7 @@
         <module>strategy</module>
         <module>chain-of-responsibility</module>
         <module>command</module>
+        <module>observer</module>
     </modules>
 
     <build>
