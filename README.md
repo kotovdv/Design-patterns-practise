@@ -4,7 +4,7 @@
 
 [Abstract factory](https://github.com/kotovdv/Design-patterns-practise/wiki/Abstract-factory)
 
-[Builder]
+[Builder](https://github.com/kotovdv/Design-patterns-practise/wiki/Builder)
 
 [Factory method](https://github.com/kotovdv/Design-patterns-practise/wiki/Factory-method)
 
