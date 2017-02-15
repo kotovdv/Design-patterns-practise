@@ -1,5 +1,14 @@
 # Design patterns
 
+<b>General info</b>
+
+Before you proceed to read information about design patterns, i'd recommend to read these topics first:
+
+[SOLID Principles] (https://github.com/kotovdv/Design-patterns-practise/wiki/SOLID-Principles)
+
+***
+
+
 <b>Creational patterns:</b>
 
 [Abstract factory](https://github.com/kotovdv/Design-patterns-practise/wiki/Abstract-factory)
