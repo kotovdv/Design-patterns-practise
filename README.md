@@ -40,9 +40,9 @@ Before you proceed to read information about design patterns, i'd recommend to r
 
 <b>Behavioral pattern:</b>
 
-[Chain of responsibility] (https://github.com/kotovdv/Design-patterns-practise/wiki/Chain-of-responsibility)
+[Chain of responsibility](https://github.com/kotovdv/Design-patterns-practise/wiki/Chain-of-responsibility)
 
-[Command] (https://github.com/kotovdv/Design-patterns-practise/wiki/Command)
+[Command](https://github.com/kotovdv/Design-patterns-practise/wiki/Command)
 
 [Interpreter]
 
@@ -52,13 +52,13 @@ Before you proceed to read information about design patterns, i'd recommend to r
 
 [Memento]
 
-[Observer] (https://github.com/kotovdv/Design-patterns-practise/wiki/Observer)
+[Observer](https://github.com/kotovdv/Design-patterns-practise/wiki/Observer)
 
 [State](https://github.com/kotovdv/Design-patterns-practise/wiki/State)
 
-[Strategy] (https://github.com/kotovdv/Design-patterns-practise/wiki/Strategy)
+[Strategy](https://github.com/kotovdv/Design-patterns-practise/wiki/Strategy)
 
-[Template method] (https://github.com/kotovdv/Design-patterns-practise/wiki/Template-method)
+[Template method](https://github.com/kotovdv/Design-patterns-practise/wiki/Template-method)
 
 [Visitor]
 
