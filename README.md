@@ -4,7 +4,7 @@
 
 Before you proceed to read information about design patterns, i'd recommend to read these topics first:
 
-[SOLID Principles] (https://github.com/kotovdv/Design-patterns-practise/wiki/SOLID-Principles)
+[SOLID Principles](https://github.com/kotovdv/Design-patterns-practise/wiki/SOLID-Principles)
 
 ***
 
